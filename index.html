@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simone Guerrisi | Sviluppo Siti Web Freelance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- VARIABILI E RESET --- */
+        :root {
+            --primary-color: #007bff; /* Blu professionale */
+            --secondary-color: #28a745; /* Verde WhatsApp */
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --text-light: #f4f4f4;
+            --text-muted: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin: 10px 0 20px 0;
+        }
+
+        /* --- HEADER / HERO SECTION --- */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #121212 100%);
+            border-bottom: 1px solid #333;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(to right, #fff, var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn-main:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        /* --- SERVIZI --- */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* --- MODULO CONTATTO (WHATSAPP) --- */
+        .contact {
+            background-color: var(--bg-card);
+            padding: 80px 20px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            margin-bottom: 80px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            box-sizing: border-box; /* Evita che l'input esca dai bordi */
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1e7e34;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid #333;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>SIMONE GUERRISI</h1>
+            <p>Sviluppatore Web Freelance. Trasformo le tue idee in siti web moderni, veloci e che portano risultati.</p>
+            <a href="#contatto" class="btn-main">Richiedi un Preventivo Gratis</a>
+        </div>
+    </header>
+
+    <section class="services container">
+        <h2 class="section-title"><span>Cosa posso fare per te</span></h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Siti Web Vetrina</h3>
+                <p>Pagine eleganti e performanti per presentare la tua attività online.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛒</div>
+                <h3>E-commerce</h3>
+                <p>Negozi online completi per vendere i tuoi prodotti in sicurezza.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Siti Responsive</h3>
+                <p>Design ottimizzato per una perfetta visualizzazione su smartphone e tablet.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatto" class="container">
+        <div class="contact">
+            <h2 class="section-title"><span>Raccontami il tuo progetto</span></h2>
+            <p style="text-align:center; max-width: 600px; margin: 0 auto 40px auto;">Compila il modulo qui sotto con la tua richiesta. Quando cliccherai su "Invia", si aprirà WhatsApp con il messaggio precompilato pronto da inviare al mio numero.</p>
+            
+            <form id="whatsappForm">
+                <div class="form-group">
+                    <label for="nome">Il tuo Nome</label>
+                    <input type="text" id="nome" placeholder="Es. Mario Rossi" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="recapito">Il tuo Numero o Email (per ricontattarti)</label>
+                    <input type="text" id="recapito" placeholder="Es. mario.rossi@email.com o 333 1234567" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descrizione">Descrivi il sito di cui hai bisogno</label>
+                    <textarea id="descrizione" rows="6" placeholder="Es. Vorrei un sito vetrina per la mia attività di... con queste pagine..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-whatsapp">INVIA RICHIESTA SU WHATSAPP</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>Simone Guerrisi - Web Developer Freelance</strong></p>
+            <p>📞 Tel: +39 379 202 4787</p>
+            <p>&copy; 2026 Simone Guerrisi. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Impedisce l'invio classico del form
+
+            // 1. Recupera i dati inseriti dall'utente
+            const nome = document.getElementById('nome').value;
+            const recapito = document.getElementById('recapito').value;
+            const descrizione = document.getElementById('descrizione').value;
+
+            // 2. Il tuo numero di telefono (senza spazi, con prefisso internazionale)
+            const tuoNumero = "393792024787"; 
+
+            // 3. Crea il testo del messaggio formattato
+            const testoMessaggio = `Ciao Simone, sono ${nome}.%0A%0A` +
+                                 `Avrei bisogno di un sito web. Ecco la mia idea:%0A` +
+                                 `"${descrizione}"%0A%0A` +
+                                 `Puoi ricontattarmi qui: ${recapito}`;
+
+            // 4. Crea l'URL finale per WhatsApp
+            const urlWhatsApp = `https://wa.me/${tuoNumero}?text=${testoMessaggio}`;
+
+            // 5. Apri WhatsApp in una nuova scheda
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
+
+</body>
+</html>
